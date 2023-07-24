@@ -4,7 +4,7 @@ keymap = [
   { keys = ["escape"], command = "escape" },
   { keys = ["ctrl+t"], command = "new_tab" },
   { keys = ["alt+t"], command = "new_tab --cursor" },
-  { keys = ["T"], command = "new_tab --current" },
+  # { keys = ["T"], command = "new_tab --current" },
   { keys = ["W"], command = "close_tab" },
   { keys = ["ctrl+w"], command = "close_tab" },
   { keys = ["q"], command = "close_tab" },
@@ -43,23 +43,25 @@ keymap = [
   { keys = ["end"], command = "cursor_move_end" },
   { keys = ["page_up"], command = "cursor_move_page_up" },
   { keys = ["page_down"], command = "cursor_move_page_down" },
-  { keys = ["ctrl+u"], command = "cursor_move_page_up 0.5" },
-  { keys = ["ctrl+d"], command = "cursor_move_page_down 0.5" },
-  { keys = ["ctrl+b"], command = "cursor_move_page_up" },
-  { keys = ["ctrl+f"], command = "cursor_move_page_down" },
+  # { keys = ["ctrl+u"], command = "cursor_move_page_up 0.5" },
+  # { keys = ["ctrl+d"], command = "cursor_move_page_down 0.5" },
+  # { keys = ["ctrl+b"], command = "cursor_move_page_up" },
+  # { keys = ["ctrl+f"], command = "cursor_move_page_down" },
 
   # vim-like keybindings
   { keys = ["j"], command = "cursor_move_down" },
   { keys = ["k"], command = "cursor_move_up" },
+  { keys = ["J"], command = "cursor_move_down 3" },
+  { keys = ["K"], command = "cursor_move_up 3" },
   { keys = ["h"], command = "cd .." },
   { keys = ["l"], command = "open" },
   { keys = ["g", "g"], command = "cursor_move_home" },
   { keys = ["G"], command = "cursor_move_end" },
   { keys = ["r"], command = "open_with" },
 
-  { keys = ["H"], command = "cursor_move_page_home" },
-  { keys = ["L"], command = "cursor_move_page_middle" },
-  { keys = ["M"], command = "cursor_move_page_end" },
+  # { keys = ["H"], command = "cursor_move_page_home" },
+  # { keys = ["L"], command = "cursor_move_page_middle" },
+  # { keys = ["M"], command = "cursor_move_page_end" },
 
   { keys = ["["], command = "parent_cursor_move_up" },
   { keys = ["]"], command = "parent_cursor_move_down" },
@@ -72,8 +74,8 @@ keymap = [
   { keys = ["y", "p"], command = "copy_filepath" },
   { keys = ["y", "d"], command = "copy_dirpath" },
 
-  { keys = ["p", "l"], command = "symlink_files --relative=false" },
-  { keys = ["p", "L"], command = "symlink_files --relative=true" },
+  { keys = ["y", "l"], command = "symlink_files --relative=false" },
+  { keys = ["y", "L"], command = "symlink_files --relative=true" },
 
   { keys = ["delete"], command = "delete_files" },
   { keys = ["d", "D"], command = "delete_files" },
@@ -84,10 +86,10 @@ keymap = [
   { keys = ["a"], command = "rename_append" },
   { keys = ["A"], command = "rename_prepend" },
 
-  { keys = ["f", "t"], command = ":touch " },
+  { keys = ["T"], command = ":touch " },
 
   { keys = [" "], command = "select --toggle=true" },
-  { keys = ["t"], command = "select --all=true --toggle=true" },
+  { keys = ["v"], command = "select --all=true --toggle=true" },
   { keys = ["V"], command = "toggle_visual" },
 
   { keys = ["w"], command = "show_tasks --exit-key=w" },
@@ -98,14 +100,16 @@ keymap = [
   { keys = [";"], command = ":" },
 
   { keys = ["'"], command = ":shell " },
-  { keys = ["m", "k"], command = ":mkdir " },
+  { keys = ["S"], command = "shell zsh" },
+  { keys = ["M"], command = ":mkdir " },
+  # { keys = ["m", "k"], command = ":mkdir " },
   { keys = ["c", "w"], command = ":rename " },
 
   { keys = ["/"], command = ":search " },
   { keys = ["|"], command = ":search_inc " },
   { keys = ["\\"], command = ":search_glob " },
-  { keys = ["S"], command = "search_fzf" },
-  { keys = ["C"], command = "subdir_fzf" },
+  { keys = ["f"], command = "search_fzf" },
+  { keys = ["F"], command = "subdir_fzf" },
 
   { keys = ["n"], command = "search_next" },
   { keys = ["N"], command = "search_prev" },
