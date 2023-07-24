@@ -11,7 +11,7 @@ xdg_open_fork = false
 mode = "default"
 
 automatically_count_files = false
-collapse_preview = true
+collapse_preview = false
 # ratios for parent view (optional), current view and preview
 column_ratio = [1, 4, 4]
 scroll_offset = 6
