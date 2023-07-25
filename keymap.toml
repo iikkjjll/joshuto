@@ -97,7 +97,12 @@ keymap = [
   { keys = ["="], command = "set_mode" },
 
   { keys = [":"], command = ":" },
-  { keys = [";"], command = ":" },
+  # { keys = [";"], command = ":" },
+
+
+  { keys = [",", "s"], command = "shell qrcp send -k %s" },
+  { keys = [",", "r"], command = "shell qrcp receive -k %s" },
+
 
   { keys = ["'"], command = ":shell " },
   { keys = ["S"], command = "shell zsh" },
