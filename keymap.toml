@@ -125,11 +125,27 @@ keymap = [
   { keys = ["m", "m"], command = "linemode mtime" },
   { keys = ["m", "M"], command = "linemode sizemtime" },
 
-  { keys = ["g", "r"], command = "cd /" },
-  { keys = ["g", "c"], command = "cd ~/.config" },
-  { keys = ["g", "d"], command = "cd ~/Downloads" },
+  { keys = ["g", "/"], command = "cd /" },
   { keys = ["g", "e"], command = "cd /etc" },
+  { keys = ["g", "u"], command = "cd /usr" },
   { keys = ["g", "h"], command = "cd ~/" },
+  { keys = ["g", "m"], command = "cd /mnt" },
+  { keys = ["g", "t"], command = "cd /tmp" },
+
+  { keys = ["g", "d"], command = "cd ~/Downloads" },
+  { keys = ["g", "p"], command = "cd ~/pic" },
+
+  { keys = ["g", "o", "d"], command = "cd ~/dotfiles" },
+  { keys = ["g", "o", "n"], command = "cd ~/notes" },
+
+  { keys = ["g", "o", "a"], command = "cd ~/app" },
+
+  { keys = ["g", "o", "v"], command = "cd ~/.config/nvim" },
+  { keys = ["g", "o", "j"], command = "cd ~/.config/joshuto" },
+
+
+  { keys = ["g", "i", "t"], command = "shell lazygit" },
+
   { keys = ["?"], command = "help" },
 ]
 
