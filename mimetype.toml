@@ -1,5 +1,8 @@
 [class]
 audio_default = [
+  { command = "ffplay", args = [
+    "--",
+  ] },
   { command = "mpv", args = [
     "--",
   ] },
@@ -7,6 +10,9 @@ audio_default = [
 ]
 
 image_default = [
+  { command = "imv", args = [
+    "--",
+  ], fork = true, silent = true },
   { command = "feh", args = [
     "--",
   ], fork = true, silent = true },
