@@ -143,6 +143,7 @@ keymap = [
 
   { keys = ["g", "o", "d"], command = "cd ~/dotfiles" },
   { keys = ["g", "o", "n"], command = "cd ~/notes" },
+  { keys = ["g", "o", "c"], command = "cd ~/codes" },
 
   { keys = ["g", "o", "a"], command = "cd ~/app" },
 
