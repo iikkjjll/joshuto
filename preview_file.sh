@@ -112,6 +112,10 @@ handle_extension() {
 
             ## HTML
         htm|html|xhtml)
+            bat --color=always --paging=never \
+                --style=plain \
+                --terminal-width="${PREVIEW_WIDTH}" \
+                "${FILE_PATH}" && exit 0
             ## Preview as text conversion
             w3m -dump "${FILE_PATH}" && exit 0
             lynx -dump -- "${FILE_PATH}" && exit 0
