@@ -57,6 +57,8 @@ reader_default = [{ command = "zathura", fork = true, silent = true }]
 libreoffice_default = [{ command = "libreoffice", fork = true, silent = true }]
 
 [extension]
+## books frmats
+epub.inherit = "reader_default"
 
 ## image formats
 avif.inherit = "image_default"
